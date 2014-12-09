@@ -10,8 +10,30 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('usuarios',array('uses'=>'UsuariosController@mostrarUsuarios'));
 
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/',function(){
+    return Redirect::to('cats');
+});
+
+
+Route::get('cats',function(){
+    return 'All cats';
+});
+
+
+Route::get('cats/{id}',function($id){
+    return "Cat #$id";
+})->where('id','[0-9]+'); //evaluando con expresion regular el parametro recibido
+
+
+Route::get('about',function(){
+    //return View::make('about')->with('number_of_cats',9000);
+    return "About";
+});
+

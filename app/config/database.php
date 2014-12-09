@@ -27,6 +27,7 @@ return array(
 	*/
 
 	'default' => 'mysql',
+	//'default' => 'sqlite',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -55,9 +56,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
+			'database'  => 'codehero-laravel',
+			'username'  => 'root',
+			'password'  => 'toor',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
