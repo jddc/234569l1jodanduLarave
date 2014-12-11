@@ -11,6 +11,12 @@
 |
 */
 Route::get('usuarios',array('uses'=>'UsuariosController@mostrarUsuarios'));
+Route::get('usuarios/nuevo',array('uses'=>'UsuariosController@nuevoUsuario'));
+Route::get('usuarios/crear',array('uses'=>'UsuariosController@crearUsuario'));
+Route::get('usuarios/{id}',array('uses'=>'UsuariosController@mverUsuario'));
+
+
+
 
 Route::get('/', function()
 {
@@ -33,7 +39,7 @@ Route::get('cats/{id}',function($id){
 
 
 Route::get('about',function(){
-    //return View::make('about')->with('number_of_cats',9000);
+    //return View::make('abouayoit')->with('number_of_cats',9000);
     return "About";
 });
 
